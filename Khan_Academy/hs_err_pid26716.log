@@ -1,0 +1,220 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 983040 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3541), pid=26716, tid=19016
+#
+# JRE version:  (17.0.4.1+1) (build )
+# Java VM: OpenJDK 64-Bit Server VM (17.0.4.1+1, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -ea -Dfile.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages org.testng.remote.RemoteTestNG -serport 62442 -protocol json -d C:\Users\Aloke\Documents\workspace-spring-tool-suite-4-4.16.1.RELEASE\Khan_Academy\test-output C:\Users\Aloke\AppData\Local\Temp\testng-eclipse--1019973550\testng-customsuite.xml
+
+Host: Intel(R) Core(TM) i3-1005G1 CPU @ 1.20GHz, 4 cores, 3G,  Windows 11 , 64 bit Build 22000 (10.0.22000.1219)
+Time: Thu Dec 15 08:08:19 2022 India Standard Time elapsed time: 0.078690 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000016dc13adff0):  JavaThread "Unknown thread" [_thread_in_vm, id=19016, stack(0x0000002c4b600000,0x0000002c4b700000)]
+
+Stack: [0x0000002c4b600000,0x0000002c4b700000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x67731a]
+V  [jvm.dll+0x832284]
+V  [jvm.dll+0x833a2e]
+V  [jvm.dll+0x834093]
+V  [jvm.dll+0x245775]
+V  [jvm.dll+0x674209]
+V  [jvm.dll+0x668a92]
+V  [jvm.dll+0x30471b]
+V  [jvm.dll+0x30bc66]
+V  [jvm.dll+0x35bab3]
+V  [jvm.dll+0x35bccf]
+V  [jvm.dll+0x2db5b8]
+V  [jvm.dll+0x2dc524]
+V  [jvm.dll+0x803db1]
+V  [jvm.dll+0x3698f1]
+V  [jvm.dll+0x7e31bc]
+V  [jvm.dll+0x3ec25f]
+V  [jvm.dll+0x3edde1]
+C  [jli.dll+0x5277]
+C  [ucrtbase.dll+0x26c0c]
+C  [KERNEL32.DLL+0x15550]
+C  [ntdll.dll+0x485b]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff822964e98, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000016dc34be800 GCTaskThread "GC Thread#0" [stack: 0x0000002c4b700000,0x0000002c4b800000] [id=23028]
+  0x0000016dc34c87a0 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000002c4b800000,0x0000002c4b900000] [id=27704]
+  0x0000016dc34c91b0 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000002c4b900000,0x0000002c4ba00000] [id=1660]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff82213c047]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000016dc13aab60] Heap_lock - owner thread: 0x0000016dc13adff0
+
+Heap address: 0x00000000c4c00000, size: 948 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x00000000c4c00000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff822520699]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (1 events):
+Event: 0.056 Loaded shared library C:\Users\Aloke\Downloads\sts-4.16.1.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\jre\bin\java.dll
+
+
+Dynamic libraries:
+0x00007ff7a91c0000 - 0x00007ff7a91ce000 	C:\Users\Aloke\Downloads\sts-4.16.1.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\jre\bin\javaw.exe
+0x00007ff8c8260000 - 0x00007ff8c8469000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff8887f0000 - 0x00007ff888807000 	C:\Program Files\Avast Software\Avast\aswhook.dll
+0x00007ff8c7170000 - 0x00007ff8c722e000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff8c57d0000 - 0x00007ff8c5b4b000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff8c5f10000 - 0x00007ff8c6021000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff8a1680000 - 0x00007ff8a1698000 	C:\Users\Aloke\Downloads\sts-4.16.1.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\jre\bin\jli.dll
+0x00007ff8a0050000 - 0x00007ff8a0069000 	C:\Users\Aloke\Downloads\sts-4.16.1.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\jre\bin\VCRUNTIME140.dll
+0x00007ff8c73d0000 - 0x00007ff8c757d000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff8c60b0000 - 0x00007ff8c60d6000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff8c72a0000 - 0x00007ff8c72c9000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff8a9be0000 - 0x00007ff8a9e85000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22000.120_none_9d947278b86cc467\COMCTL32.dll
+0x00007ff8c6c00000 - 0x00007ff8c6ca3000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff8c5b50000 - 0x00007ff8c5c68000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff8c5730000 - 0x00007ff8c57cd000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff8c7830000 - 0x00007ff8c7862000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff8a1190000 - 0x00007ff8a119c000 	C:\Users\Aloke\Downloads\sts-4.16.1.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\jre\bin\vcruntime140_1.dll
+0x00007ff88de10000 - 0x00007ff88dea1000 	C:\Users\Aloke\Downloads\sts-4.16.1.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\jre\bin\msvcp140.dll
+0x00007ff821e50000 - 0x00007ff822a96000 	C:\Users\Aloke\Downloads\sts-4.16.1.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\jre\bin\server\jvm.dll
+0x00007ff8c8080000 - 0x00007ff8c812e000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff8c6e90000 - 0x00007ff8c6f2e000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff8c6140000 - 0x00007ff8c6260000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff8c72d0000 - 0x00007ff8c72d8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff8bef60000 - 0x00007ff8bef93000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff8bd330000 - 0x00007ff8bd33a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff8a6b70000 - 0x00007ff8a6b79000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff8c7730000 - 0x00007ff8c779f000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff8c47b0000 - 0x00007ff8c47c8000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff8c1150000 - 0x00007ff8c115a000 	C:\Users\Aloke\Downloads\sts-4.16.1.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\jre\bin\jimage.dll
+0x00007ff8c3140000 - 0x00007ff8c3361000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff8ab460000 - 0x00007ff8ab491000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff8c6030000 - 0x00007ff8c60af000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff8a0e10000 - 0x00007ff8a0e35000 	C:\Users\Aloke\Downloads\sts-4.16.1.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\jre\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\Aloke\Downloads\sts-4.16.1.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\jre\bin;C:\WINDOWS\SYSTEM32;C:\Program Files\Avast Software\Avast;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22000.120_none_9d947278b86cc467;C:\Users\Aloke\Downloads\sts-4.16.1.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\jre\bin\server
+
+VM Arguments:
+jvm_args: -ea -Dfile.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages 
+java_command: org.testng.remote.RemoteTestNG -serport 62442 -protocol json -d C:\Users\Aloke\Documents\workspace-spring-tool-suite-4-4.16.1.RELEASE\Khan_Academy\test-output C:\Users\Aloke\AppData\Local\Temp\testng-eclipse--1019973550\testng-customsuite.xml
+java_class_path (initial): C:\Users\Aloke\Downloads\sts-4.16.1.RELEASE\configuration\org.eclipse.osgi\589\0\.cp\lib\testng-remote.jar;C:\Users\Aloke\Documents\workspace-spring-tool-suite-4-4.16.1.RELEASE\Khan_Academy\target\test-classes;C:\Users\Aloke\Documents\workspace-spring-tool-suite-4-4.16.1.RELEASE\Khan_Academy\target\classes;C:\Users\Aloke\.m2\repository\io\github\bonigarcia\webdrivermanager\5.0.3\webdrivermanager-5.0.3.jar;C:\Users\Aloke\.m2\repository\org\slf4j\slf4j-api\1.7.32\slf4j-api-1.7.32.jar;C:\Users\Aloke\.m2\repository\com\google\code\gson\gson\2.8.8\gson-2.8.8.jar;C:\Users\Aloke\.m2\repository\org\jsoup\jsoup\1.14.2\jsoup-1.14.2.jar;C:\Users\Aloke\.m2\repository\com\github\docker-java\docker-java\3.2.12\docker-java-3.2.12.jar;C:\Users\Aloke\.m2\repository\com\github\docker-java\docker-java-core\3.2.12\docker-java-core-3.2.12.jar;C:\Users\Aloke\.m2\repository\com\github\docker-java\docker-java-api\3.2.12\docker-java-api-3.2.12.jar;C:\Users\Aloke\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\Aloke\.m2\repository\org\apache\commons\commons-compress\1.21\commons-compress-1.21.jar;C:\Users\Aloke\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\Aloke\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\Aloke\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.64\bcpkix-jdk15on-1.64.jar;C:\Users\Aloke\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.64\bcprov-jdk15on-1.64.jar;C:\Users\Aloke\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\Aloke\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.2.12\docker-java-transport-httpclient5-3.2.12.jar;C:\Users\Aloke\.m2\repository\com\github\docker-java\docker-java-transport\3.2.12\docker-java-transport-3.2.12.jar;C:\Users\Aloke\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.0.3\httpcl
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 62914560                                  {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 994050048                                 {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5832780                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122912730                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122912730                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+   size_t SoftMaxHeapSize                          = 994050048                              {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-19
+PATH=C:/Users/Aloke/Downloads/sts-4.16.1.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257/jre/bin/server;C:/Users/Aloke/Downloads/sts-4.16.1.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257/jre/bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;D:\apache-maven-3.8.6-bin\apache-maven-3.8.6\bin;C:\Program Files\Java\jdk-19\bin;C:\Program Files\nodejs;C:\Program Files\nodejs\node_modules\npm\bin;C:\Users\Aloke\AppData\Roaming\npm\node_modules;C:\Program Files\Java\jdk-19;C:\strawberry\c\bin;C:\strawberry\perl\bin;C:\Users\Aloke\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\Aloke\AppData\Local\Programs\Python\Python311\;C:\Users\Aloke\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3\bin;;C:\Program Files\Java\jdk-19\bin;C:\Users\Aloke\AppData\Roaming\npm;C:\Program Files\nodejs\node_modules\npm\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2022.2.3\bin;;C:\Users\Aloke\AppData\Local\Programs\Microsoft VS Code\bin;;C:\Users\Aloke\Downloads\sts-4.16.1.RELEASE;
+USERNAME=Aloke
+TERM=dumb
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 126 Stepping 5, GenuineIntel
+TMP=C:\Users\Aloke\AppData\Local\Temp
+TEMP=C:\Users\Aloke\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22000 (10.0.22000.1219)
+OS uptime: 1 days 3:37 hours
+
+CPU: total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 126 stepping 5 microcode 0xa0, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, avx512f, avx512dq, avx512cd, avx512bw, avx512vl, sha, fma, vzeroupper, avx512_vpopcntdq, avx512_vpclmulqdq, avx512_vaes, avx512_vnni, clflush, clflushopt, avx512_vbmi2, avx512_vbmi
+
+Memory: 4k page, system-wide physical 3784M (24M free)
+TotalPageFile size 15560M (AvailPageFile size 6M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 111M, peak: 112M
+
+vm_info: OpenJDK 64-Bit Server VM (17.0.4.1+1) for windows-amd64 JRE (17.0.4.1+1), built on Aug 17 2022 07:42:43 by "temurin" with MS VC++ 16.7 (VS2019)
+
+END.
